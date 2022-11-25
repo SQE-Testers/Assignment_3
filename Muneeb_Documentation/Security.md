@@ -64,6 +64,10 @@ module.exports = {
 };
 ```
 
+### Server MiddleWare URL
+nternally we use Nuxt environment properties to get the URL of Server Middleware. However, you can change it by defining the middlewareUrl property in the publicRuntimeConfig object inside the nuxt.config.js file.
+
+
 ### Reporting of Security vulnerability  of Vue StoreFront
 Vue Store Front guides it's users to email them about any security vulnerability they found.They have provided an email on thier github repositry
 You check this page from the link given below:
