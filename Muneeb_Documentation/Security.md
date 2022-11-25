@@ -46,6 +46,23 @@ export default {
 }
 ```
 
+### Configuring Helmet in VSF Server Middleware 
+Helmet is disabled by default. You can enable it using the helmet property in the middleware.config.js file. You can either pass true to enable it with the default configuration or pass an object to use your custom configuration.
+
+```bash
+// middleware.config.js
+module.exports = {
+  helmet: {
+    // default configuration
+    crossOriginOpenerPolicy: false,
+    contentSecurityPolicy: false,
+    crossOriginEmbedderPolicy: false,
+    permittedCrossDomainPolicies: {
+      permittedPolicies: 'none'
+    }
+  }
+};
+```
 
 ### Reporting of Security vulnerability  of Vue StoreFront
 Vue Store Front guides it's users to email them about any security vulnerability they found.They have provided an email on thier github repositry
