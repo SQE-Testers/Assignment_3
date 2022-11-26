@@ -1,5 +1,5 @@
 # Security Of VueStoreFront
-To improve the security of Vue Storefront applications, we preinstall the 
+To improve the security of Vue Storefront applications , they use the helmet 
 #### Helmet 
 (opens new window)security extension by default for Nuxt application and the Server Middleware.
 
@@ -29,7 +29,7 @@ Helmet uses different built in modules to secure HTTP Headers
 HTTPS Headers are used to pass additional information from client to server through the help of request and response.
 
 ### Configuring Helment in Vue Store Front
-Helmet is disabled by default. You can enable it using the helmet property in the @vue-storefront/middleware/nuxt module configuration. You can pass true to enable it with the default configuration or an object to use your custom configuration.
+Helmet is disabled by default. It can be enabled by using the helmet property in the @vue-storefront/middleware/nuxt module configuration. 
 
 ```bash
   // nuxt.config.js
@@ -47,7 +47,7 @@ export default {
 ```
 
 ### Configuring Helmet in VSF Server Middleware 
-Helmet is disabled by default. You can enable it using the helmet property in the middleware.config.js file. You can either pass true to enable it with the default configuration or pass an object to use your custom configuration.
+Helmet is disabled by default. It can be enabled by using the helmet property in the middleware.config.js file. There are two options to enable it  one with with the default configuration and other is to pass an object to use your custom configuration.
 
 ```bash
 // middleware.config.js
@@ -65,8 +65,7 @@ module.exports = {
 ```
 
 ### Server MiddleWare URL
-nternally we use Nuxt environment properties to get the URL of Server Middleware. However, you can change it by defining the middlewareUrl property in the publicRuntimeConfig object inside the nuxt.config.js file.
-
+The URL of the Server Middleware can be obtained using using Nuxt environment parameters. The publicRuntimeConfig object in the nuxt.config.js file's middlewareUrl field can be changed.
 
 ### Reporting of Security vulnerability  of Vue StoreFront
 Vue Store Front guides it's users to email them about any security vulnerability they found.They have provided an email on thier github repositry
