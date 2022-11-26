@@ -14,7 +14,7 @@ Kubernetes - the best, Google-originated orchestration tool globally - and team 
 ## Scalability 
 Cloud-native infrastructure enables to handle dynamic traffic peaks by automatically adding or removing resources.Contrary to the conventional physical servers , flexibility becomes very difficult because we have to place the resources physically at a point. But in cloud we just have to apply for more space and pay more to scale our application.
 
-## Reliability 
+## Recoverability 
 Support team provides daily backups, which makes testing new solutions safely. Daily backups by default makes business consistency perfectly secured. With daily back we will have our data secured. So for example if someone tries to attack our system then we still have our data and we can use it.
 No one can black mail us.Moreover if one component is down then other componenets remain intact and can be used.
 
