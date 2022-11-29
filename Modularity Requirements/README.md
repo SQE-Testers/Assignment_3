@@ -36,7 +36,41 @@ A better alternative is to structure your project using old-fashioned modules an
 
 Vue StoreFront is doing each functionality in a separate module and whenever they need that module to be there they just simply "import" that module.
 
-- Example: ![Micro Services](https://i.imgur.com/HnZcfKJ.png)
+- Example:
+ ![Micro Services](https://i.imgur.com/HnZcfKJ.png)
 All these imports are using the other modules which that file needed.
 
 ## 4. Extensibility
+
+## Introduction:
+
+Extensibility is one of the key selling points of many frameworks, and Vue Storefront is no exception. There is a good reason for this - at some point, most projects need to extend the base of the framework to meet their needs, be it with a ready-to-use or a custom plugin. Well-thought-out extensions or plugins system enables flexibility to meet the demands of the most, even very diverse projects. On this page, we will discuss possible ways to extend Vue Storefront if the basic features are not enough for your project.
+
+First, you should consider which part of the application you need to extend - frontend, backend, or both. Depending on your needs, you may need to extend:
+
+- Vue.js
+- Nuxt.js
+- Server Middleware
+
+## Extending Vue.js
+Plugins allow adding global-level functionalities to Vue.js, such as components, methods, helpers, or directives. These mainly extend the frontend portion of the application and can be divided into two categories:
+- UI plugins
+- Non-UI plugins
+
+### Vue.js UI plugins
+UI plugins extend how the application looks or behaves on user interactions. They include plugins that add support for:
+- Event handling.
+- Responsive design, resizing, scrolling, and animations.
+- Handling forms and validation.
+- Routing, lazy loading, lazy hydration, meta tags.
+
+### Vue.js non-UI plugins
+Non-UI plugins extend how the application works under the hood or handles state and storage. They include plugins that add support for:
+- Making HTTP requests.
+- Internationalization (i18n).
+- Custom events.
+- Persistence (storage).
+- State management.
+- Web workers.
+
+
