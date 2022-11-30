@@ -26,3 +26,14 @@ A better alternative is to structure your project using old-fashioned modules an
 
 ![Micro Services](https://i.imgur.com/tln2Yys.png)
 
+# 3. Class/Components Reusability
+Avoid using redundant or duplicate code, which can be hard to maintain. Instead of copying and pasting the same code throughout your extension, create a single class or method and reference it when needed.
+
+As a general rule, reuse code as much as possible to prevent code duplication.
+
+The code you write should be small, focused, and provide a generic solution. This will help you reuse code in future development.
+
+Here is the example of code reusability in Magento:
+
+https://github.com/magento/magento2/blob/2.4-develop/app/code/Magento/AdminNotification/Controller/Adminhtml/System/Message/ListAction.php  
+
