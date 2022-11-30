@@ -37,3 +37,14 @@ Here is the example of code reusability in Magento:
 
 https://github.com/magento/magento2/blob/2.4-develop/app/code/Magento/AdminNotification/Controller/Adminhtml/System/Message/ListAction.php  
 
+# 4. Extensibility
+
+## Introduction:
+Product extensibility describes how easy it is to expand a product’s feature set. An extensible product has been designed from its earliest stages for customization and enhancement. Extensible products are designed for ease in expanding your installation’s feature set, enriching current features, and integrating with third-party software.
+
+Maximizing extensibility has been our goal through all aspects of Magento development. Core tasks such as shipping are packaged as discrete modules, and you expand your features by installing modules that you either buy from third-party vendors or create yourself.
+
+Here's the example of extensibility in magento:
+
+https://github.com/magento/magento2/blob/2.4-develop/app/code/Magento/Backend/App/AbstractAction.php
+
