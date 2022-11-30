@@ -35,6 +35,24 @@ Once all the valid resources are whitelisted then Magento can apply or enforce C
 #### Restric mode
 In restrict mode, the browser is instructed to enforce all content policies and limit publication to whitelisted resources
 
+### Enhanced Password Management 
+
+Magento has improved the hashing algorithms it uses to store
+the passwords. Magento now uses the Argon2ID13 algorithms to store Password.
+Argon2ID13 is an algorithm for storing password
+- It resists the GPU cracking attacks
+- Argon2i is optimized to resist side-channel attacks
+
+### Prevention from ClickJacking attacks
+ClickJacking is a from of attack in which hackers display a dummy 
+web page to users . This can cause users to unwittingly download malware,
+visit malicious web pages, provide credentials 
+or sensitive information, transfer money, or purchase products online.
+Magento protects it users from ClickJacking by
+adopting the mechanism of X-Frame Option.
+X-Frame Options becomes the part of HTTP header and 
+it directs the browser either to load the webpage in frame or not.
+
 Further information can be read from here:
 [Security Documentation of Magento](https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html)
 
