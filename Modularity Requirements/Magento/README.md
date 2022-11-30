@@ -9,3 +9,20 @@ Magento 2 microservices, such as orders, product catalog, and checkout, provide 
 In this image, we can see Magento has
 micro-services requirements as they divided the services in many micro ones which has its own responsibilities
 but communicate with others to form a unified system.
+
+# 2. Modular Structure
+Magento 2 stores the source files in a very structured and sophisticated manner. It is essential for the users to understand the directory structure in Magento 2 before diving deep into the versatility of this eCommerce platform. It is also essential for the budding developers to clear the Magento 2 Folder Structure concept, as it will help them better understand how the backend works in Magento 2.
+
+![Micro Services](https://i.imgur.com/qZrn6K4.png)
+
+## Module-based, not file-based structure
+
+When starting a project, the easiest way to go is Magento project structure, which somehow forces you to group your files by type: components, services, helpers with a few odd exceptions, such as the router and the store. This structure is not wrong — for small applications, it’s very easy to maintain, but for mid-size/large applications there are a few downsides:
+- The source code navigation is not simple: imagine the amount of files inside the components folder, and knowing the purpose of each one — same for any other file type
+- Debugging can be very time-consuming: you’d need to jump file-to-file and draw a mental map of how a simple process works to get to the root cause of a bug.
+
+A better alternative is to structure your project using old-fashioned modules and to think of each module as a small vue-cli project, decreasing the downsides explained above, so you get something like this:
+
+
+![Micro Services](https://i.imgur.com/tln2Yys.png)
+
