@@ -1,4 +1,3 @@
-
 # 1. Micro-Services
 Microservice architecture is a design pattern that separates an application into independently deployable services. Each independent service communicates with the others through lightweight APIs or a Data layer. This service can use different programming languages different than PHP and are free from the Magento 2 best practices.
 

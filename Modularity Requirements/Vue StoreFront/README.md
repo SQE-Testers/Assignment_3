@@ -74,3 +74,17 @@ Non-UI plugins extend how the application works under the hood or handles state 
 - Web workers.
 
 
+# 5. Linters for better code quality
+
+The first linters used to check the source code and find potential optimizations for compilers. But, over the years, many other checks and analysis would be included in the process of linting.
+
+The usage of linters has also helped many developers to write better code for not compiled programming languages. As there is not compiling time errors, finding typos, syntax errors, uses of undeclared variables, calls to undefined or deprecated functions, for instance, helping developers to fix it faster and reduce bugs before execution.
+
+
+## Performance improvements:
+
+Every experienced developer knows not only the importance of performing software but many tricks that improve it. The problem is: what about newcomers? How can you pass this knowledge forward? Even senior programmers can miss a technique or two. So, why not let an automation software do it for you?
+
+Did you know that in CSS, the universal selector (*) may slow down a page loading time? Or that unqualified attribute selectors have the same performance characteristics as the universal selector? Avoiding them is good practice.
+
+Many linters include a performance check. They can add different kinds of performance improvements for experienced and newcomers developers. CSSLint is just an example.
