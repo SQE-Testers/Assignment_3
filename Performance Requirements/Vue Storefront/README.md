@@ -70,3 +70,16 @@ First, the browser will load and parse index.html. While parsing, it will find i
     }
 
 
+# Usage of Lazy loading
+
+Lazy loading is a technique used to prevent or delay the loading of non-critical resources until they are needed. You can use this mechanism for different types of resources, but in the case of images, our goal is to lazily load everything that is not visible to the user within the initial viewport.
+
+Use the loading="lazy" attribute to load an image lazily. It also works for the <nuxt-img> component.
+
+    <img src="..." loading="lazy">
+    <nuxt-image src="..." loading="lazy" />
+
+Example of Lazy Loading in Vue Storefront:
+
+https://github.com/vuestorefront/vue-storefront/blob/0f1eac70cf57ddb8b47d077596bea879cf28f591/packages/nuxt-theme-module/theme/components/SearchResults.vue#L76
+
