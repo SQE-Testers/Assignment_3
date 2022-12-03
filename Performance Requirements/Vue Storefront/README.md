@@ -40,3 +40,33 @@ We’re recommending to put an nginx or varnish proxy in front of vue-storefront
         }
 
 
+# CDN 
+
+The last mile to the customer is the most important. You can have the fastest servers, but if you distribute your page across geographic locations, it can't be fast. In our cloud, we use the fastest CDN solution provided by Cloud.
+
+To improve site performance, Vue Storefront uses Google Cloud CDN which supports modern protocols initially developed at Google, like HTTP/2 and QUIC. Thanks to them, Google Cloud CDN enables websites to serve millions of requests per day seamlessly, taking care of delivering superb user experience across all touchpoints.
+
+
+
+![Vue CDN](https://i.imgur.com/dwEyTlV.png)
+
+
+## Use HTTP2 Push 
+
+HTTP2 Push is a performance technique to reduce latency by loading resources even before the browser knows it will need them.
+First, the browser will load and parse index.html. While parsing, it will find information about styles.css and script.js, sending a request to the server to get them. Because we know that the page needs those two files, we can use HTTP2 Push to send them to the client immediately without waiting for the client to request them.
+
+    function pushScripts(): void {
+        this.options.render = merge(this.options.render, {
+            http2: {
+            push: true,
+            pushAssets: (request, response, publicPath, preloadFiles) => {
+                return preloadFiles
+                .filter(({ asType }) => asType === 'script')
+                .map(({ file, asType }) => `<${publicPath}${file}>; rel=preload; as=${asType}`);
+                }
+            }
+        });
+    }
+
+
