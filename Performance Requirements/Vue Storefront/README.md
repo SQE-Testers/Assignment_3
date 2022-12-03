@@ -83,19 +83,88 @@ Example of Lazy Loading in Vue Storefront:
 
 https://github.com/vuestorefront/vue-storefront/blob/0f1eac70cf57ddb8b47d077596bea879cf28f591/packages/nuxt-theme-module/theme/components/SearchResults.vue#L76
 
-
 # Usage of PWA
-
 Progressive Web Application (PWA) is a type of web app that can operate both as a web page and mobile app on any device. It is a great solution for poor mobile UX and low conversion rates in your online store. Using standard technologies, PWA is aimed at delivering native-like user experience, with speedier conversion and cleaner browsing even with a poor Internet connection. 
-
-PWA uses headless architecture which empowers your business with exceptional agility – both to compose your eCommerce tech stack of best-of-breed solutions, and to heavily optimize your conversion rates. 
-
-For PWA functionalities, Vue storefront is using node modules.
-
-- [`@nuxtjs/pwa`](https://pwa.nuxtjs.org/) - for PWA functionalities.
 
 The Nuxt. js PWA module registers a service worker for you to deal with offline caching. It automatically generates a manifest.json file. It automatically adds SEO friendly meta data with manifest integration. It automatically generates app icons with different sizes.
 
-#### Installation
-    yarn add --dev @nuxtjs/pwa
+Vue Storefront uses Nuxt.js modules for PWA functionalities:
 
+- [`@nuxtjs/pwa`](https://pwa.nuxtjs.org/) - for PWA functionalities.
+
+#### Installation
+
+Add @nuxtjs/pwa dependency to your project:
+
+    npm i --save-dev @nuxtjs/pwa
+
+Edit your nuxt.config.js file to add pwa module:
+
+    {
+        buildModules: [
+            '@nuxtjs/pwa',
+        ]
+    }
+
+# Usage of Service Workers
+
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+
+
+![workers](https://i.imgur.com/wRF3fpO.png)
+
+The main thread creates the worker using the “Worker” constructor. This constructor takes in a single argument, the path to the worker file. The worker file contains the code that will run in the worker thread; workers run in another global context that is different from the current window.
+
+Data is passed between the worker and the main thread via messages — the main thread and worker thread sends messages using the postMessage() method, and respond to messages sent using the onmessage handler.
+
+
+# Use of Local storage
+
+Local storage can store 5MB of data per app for the lifetime of the app. Closing the browser will not affect the data in any way – it stays there unless you delete it.
+
+You can only access the local storage object through localStorage. The methods you can use to perform operations on the localStorage object are:
+
+    localStorage // to access the localStorage object 
+    localStorage.setItem('name', 'John') // sets name equal to john localStorage.getItem('name') // "John" 
+    localStorage.removeItem('name') // removes name from the localStorage localStorage.clear() // clears the localStorage
+
+localStorage.setItem() takes a key and value as parameters and sets a new item in the local storage object equal to the given key value pair.
+
+localStorage.getItem() takes a key as a parameter and returns the value stored to that key in the storage.
+
+localStorage.clear() clears the whole localStorage object.
+
+localStorage.removeItem() takes in a key as a parameter and removes the corresponding key-value pair. ‌‌
+
+Any item that you store in localStorage will be stored as a string. This means that you need to convert other data types such as arrays or objects to strings – otherwise you lose their structure.
+
+See the example below:      
+
+    const scores = [10, 8, 6, 3, 9] 
+    const scoresJSON = JSON.stringify(scores) 
+    localStorage.setItem('scores', scoresJSON) 
+    localStorage // output >> {scores: '[10, 8, 6, 3, 9]', length: 1}
+
+In the example above, we first created an array score, then converted it into a string using JSON.stringify(), and finally saved the stringified scores array in localStorage.
+
+![workers](https://i.imgur.com/Sa2Uzha.png)
+
+
+
+# Reference
+
+- https://vuestorefront.io/blog/caching-on-production
+
+- https://www.nexcess.net/blog/what-is-redis-cache/
+
+- https://docs.vuestorefront.io/cloud/v2/in-a-nutshell/features.html#multi-regions
+
+- https://www.fmeextensions.com/blog/best-cdn-for-magento/
+
+- https://docs.vuestorefront.io/v2/performance/optimizing-images.html
+
+- https://vuestorefront.io/pwa
+
+- https://pwa.nuxtjs.org/setup/
+
+- https://www.freecodecamp.org/news/how-web-storage-works/
