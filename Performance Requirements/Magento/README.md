@@ -70,6 +70,29 @@ The Magento Lazy Load extension by Mageplaza helps the development team shorten 
 
 Magento Lazy Load only loads images within the visible part of the page. Product images that are out of view won’t be loaded until the user explores that particular section by scrolling down.
 
-## Lazy Loading in Magento:
+### Lazy Loading in Magento:
 ![lazy Loading Magento](https://cm.magefan.com/mf_webp/gif/media/catalog/magento-lazy-loading.webp)
+
+# Usage of PWA
+
+Progressive Web Application (PWA) is a type of web app that can operate both as a web page and mobile app on any device. It is a great solution for poor mobile UX and low conversion rates in your online store. Using standard technologies, PWA is aimed at delivering native-like user experience, with speedier conversion and cleaner browsing even with a poor Internet connection.
+
+![lazy Loading Magento](https://i.imgur.com/jCnIAJj.png)
+
+### PWA used in Magento
+
+A PWA Studio storefront application communicates with Magento using its external API. These external API services interact with Magento’s internal service modules and return the response through the same external API. GraphQL is the preferred API for this purpose (fetch and push data).
+
+![lazy Loading Magento](https://i.imgur.com/sYWTBHG.png)
+
+
+PWA is installed in Magento using Venia storefront (PWA storefront). The coupling between a PWA Studio storefront and Magento should be such that the storefront has a dependency on Magento, but not vice versa. A PWA Studio storefront and its backing Magento server are two independent applications. Therefore, unlike Magento themes (which has its codebase in Magento), PWA’s codebase is separate from each other.
+
+PWA is integrated with Magento using the following major steps:
+
+- Cloning the PWA studio repository
+- Installing the PWA studio dependencies
+- Specifying the Magento backend server
+
+Magento's front-end themes such as assets, scripts, layout files, etc. are not used by PWA studio storefront. Instead, PWA studio uses its own storefront applications to build front-end store and uses Magento’s GraphQL and REST APIs to send or receive data.
 
