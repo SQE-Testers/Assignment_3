@@ -3,12 +3,6 @@ Microservice architecture is a design pattern that separates an application into
 
 Magento 2 microservices, such as orders, product catalog, and checkout, provide an API through service. Font-end interacts with these microservice through GraphQL or REST or direct database communication and server-side rendering with HTML response.
 
-![Micro Services](https://i.imgur.com/jmj2i81.png)
-
-In this image, we can see Magento has
-micro-services requirements as they divided the services in many micro ones which has its own responsibilities
-but communicate with others to form a unified system.
-
 # 2. Modular Structure
 Magento 2 stores the source files in a very structured and sophisticated manner. It is essential for the users to understand the directory structure in Magento 2 before diving deep into the versatility of this eCommerce platform. It is also essential for the budding developers to clear the Magento 2 Folder Structure concept, as it will help them better understand how the backend works in Magento 2.
 
