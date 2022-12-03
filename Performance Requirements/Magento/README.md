@@ -29,3 +29,28 @@ Reverse proxies serve “public” or shared content to more than one user. Howe
 
 - Private - Private content is stored client side (e.g., browser) and is specific to an individual customer. Examples of private content include wishlist, shopping cart, customer name, and address. You should limit stored private content to a small portion of the page’s total content.
 
+# Content Delivery network
+
+Content Delivery Network (CDN) is a network of distributed proxy servers worldwide. Proxy servers act as an intermediary between the origin server & the end-user requesting the content.
+
+CDN uses caching & multiple remote points of presence (PoPs) to serve the content quickly to visitors.
+
+The proxy server stores your media files closer to the target audience. Once a request is made, the content is delivered faster to the visitor.
+
+It ensures that the store is readily available to customers as they browse the site pages.
+
+### Imprtance of CDN in Magento
+
+![Vue Cache](https://i.imgur.com/mHTnnjv.png)
+
+### CDN workflow in Magento
+
+- Browser requests media - A page from the store opens in the customer’s browser, and the browser requests the media that is specified in the HTML.
+
+- Request sent to CDN; images found and served - The request is sent first to the CDN. If the CDN has the images in storage, it serves the media files to the customer’s browser.
+
+- Media not found, request sent to Commerce web server - If the CDN does not have the media files, the request is sent to the Commerce web server. If the media files are found in the file system, the web server sends them to the customer’s browser.
+
+These are the steps of configuring the CDN in Magento:
+https://experienceleague.adobe.com/docs/commerce-admin/content-design/media/storage/media-storage-content-delivery-network.html?lang=en
+
