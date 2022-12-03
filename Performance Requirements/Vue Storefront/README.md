@@ -83,3 +83,19 @@ Example of Lazy Loading in Vue Storefront:
 
 https://github.com/vuestorefront/vue-storefront/blob/0f1eac70cf57ddb8b47d077596bea879cf28f591/packages/nuxt-theme-module/theme/components/SearchResults.vue#L76
 
+
+# Usage of PWA
+
+Progressive Web Application (PWA) is a type of web app that can operate both as a web page and mobile app on any device. It is a great solution for poor mobile UX and low conversion rates in your online store. Using standard technologies, PWA is aimed at delivering native-like user experience, with speedier conversion and cleaner browsing even with a poor Internet connection. 
+
+PWA uses headless architecture which empowers your business with exceptional agility – both to compose your eCommerce tech stack of best-of-breed solutions, and to heavily optimize your conversion rates. 
+
+For PWA functionalities, Vue storefront is using node modules.
+
+- [`@nuxtjs/pwa`](https://pwa.nuxtjs.org/) - for PWA functionalities.
+
+The Nuxt. js PWA module registers a service worker for you to deal with offline caching. It automatically generates a manifest.json file. It automatically adds SEO friendly meta data with manifest integration. It automatically generates app icons with different sizes.
+
+#### Installation
+    yarn add --dev @nuxtjs/pwa
+
