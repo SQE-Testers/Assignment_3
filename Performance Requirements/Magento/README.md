@@ -41,7 +41,7 @@ It ensures that the store is readily available to customers as they browse the s
 
 ### Imprtance of CDN in Magento
 
-![Vue Cache](https://i.imgur.com/mHTnnjv.png)
+![CDN Magento](https://i.imgur.com/mHTnnjv.png)
 
 ### CDN workflow in Magento
 
@@ -53,4 +53,23 @@ It ensures that the store is readily available to customers as they browse the s
 
 These are the steps of configuring the CDN in Magento:
 https://experienceleague.adobe.com/docs/commerce-admin/content-design/media/storage/media-storage-content-delivery-network.html?lang=en
+
+# Lazy Loading
+
+Lazy Loading is an on-demand loading technique that aims at optimizing website loading speed through deferred content delivery, images in particular.
+
+The main idea behind the lazy loading is to load only necessary resources at the viewport instead of loading all of them at once. So the website images are loaded only at the visible part of the page while the others — when users scroll down the page. 
+
+Since the system only loads the elements customers need instead of loading the whole page content, speed is increased and the web page is delivered faster. That's exactly what makes lazy loading one of the best options to optimize images in Magento 2.
+
+### Mageplaze Extension for Magento
+
+Mageplaza is the extension marketplace for Magento 2 where will be downloading SMTP extension for setting up an email configuration with Magento 2.
+
+The Magento Lazy Load extension by Mageplaza helps the development team shorten their web pages’ load time. It doesn’t spend time loading all the product images at once. This results in a significant decrease in the bounce rate.
+
+Magento Lazy Load only loads images within the visible part of the page. Product images that are out of view won’t be loaded until the user explores that particular section by scrolling down.
+
+## Lazy Loading in Magento:
+![lazy Loading Magento](https://cm.magefan.com/mf_webp/gif/media/catalog/magento-lazy-loading.webp)
 
