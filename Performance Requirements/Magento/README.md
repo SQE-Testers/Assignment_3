@@ -96,3 +96,48 @@ PWA is integrated with Magento using the following major steps:
 
 Magento's front-end themes such as assets, scripts, layout files, etc. are not used by PWA studio storefront. Instead, PWA studio uses its own storefront applications to build front-end store and uses Magento’s GraphQL and REST APIs to send or receive data.
 
+
+# Usage of Service Workers
+
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+
+
+![workers](https://i.imgur.com/wRF3fpO.png)
+
+The main thread creates the worker using the “Worker” constructor. This constructor takes in a single argument, the path to the worker file. The worker file contains the code that will run in the worker thread; workers run in another global context that is different from the current window.
+
+Data is passed between the worker and the main thread via messages — the main thread and worker thread sends messages using the postMessage() method, and respond to messages sent using the onmessage handler.
+
+
+# Use of Local storage
+
+Local storage can store 5MB of data per app for the lifetime of the app. Closing the browser will not affect the data in any way – it stays there unless you delete it.
+
+You can only access the local storage object through localStorage. The methods you can use to perform operations on the localStorage object are:
+
+    localStorage // to access the localStorage object 
+    localStorage.setItem('name', 'John') // sets name equal to john localStorage.getItem('name') // "John" 
+    localStorage.removeItem('name') // removes name from the localStorage localStorage.clear() // clears the localStorage
+
+localStorage.setItem() takes a key and value as parameters and sets a new item in the local storage object equal to the given key value pair.
+
+localStorage.getItem() takes a key as a parameter and returns the value stored to that key in the storage.
+
+localStorage.clear() clears the whole localStorage object.
+
+localStorage.removeItem() takes in a key as a parameter and removes the corresponding key-value pair. ‌‌
+
+Any item that you store in localStorage will be stored as a string. This means that you need to convert other data types such as arrays or objects to strings – otherwise you lose their structure.
+
+See the example below:      
+
+    const scores = [10, 8, 6, 3, 9] 
+    const scoresJSON = JSON.stringify(scores) 
+    localStorage.setItem('scores', scoresJSON) 
+    localStorage // output >> {scores: '[10, 8, 6, 3, 9]', length: 1}
+
+In the example above, we first created an array score, then converted it into a string using JSON.stringify(), and finally saved the stringified scores array in localStorage.
+
+![workers](https://i.imgur.com/Sa2Uzha.png)
+
+
