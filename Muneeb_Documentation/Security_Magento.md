@@ -43,6 +43,17 @@ Argon2ID13 is an algorithm for storing password
 - It resists the GPU cracking attacks
 - Argon2i is optimized to resist side-channel attacks
 
+#### Argon2i
+
+Argon2 is a cryptographic algorithm that allows you to store your entries safely. 
+It is dedicated to password encryption and doesn’t have any uses apart from that.
+- Argon2d maximizes resistance to GPU cracking attacks
+- Argon2i is optimized to resist side-channel attacks
+
+#### Pictorial Description
+
+![Process](https://devdocs.magento.com/common/images/archi_hash_upgrade_algorithm.png)
+
 ### Prevention from ClickJacking attacks
 ClickJacking is a from of attack in which hackers display a dummy 
 web page to users . This can cause users to unwittingly download malware,
