@@ -27,6 +27,11 @@ Some of the Magento scaling tasks include:
 - Auto Scaling solutions
 - Optimizing usage for low costs
 
+### Multiple Master Server
+Adobe Commerce offers number of scalability advantages, including the ability to use three separate master databases for different functional areas of the Magento application.
+
+Checkout, orders, and product data can all each use a separate master databases that you can optionally replicate. This separation independently scales load from website checkouts, order management activities, website browsing, and merchandising activities, depending on your needs. These changes provide considerable flexibility in how the database tier can be scaled.Multi-master replication is a method of database replication which allows data to be stored by a group of computers, and updated by any member of the group. All members are responsive to client data queries
+
 ### Continuous Data Backup
 
 Magento do continous data backup for it users.
@@ -36,6 +41,12 @@ data.The backup tasks can be managed by the Magento support staff.
 Routine backups are done when you use the Magento hosting support. 
 For your Magento system and databases, they create backups.
 In any unavoidable circumstances data can be retrieved quickly.
+
+### Commands
+```bash
+bin/magento config:set system/backup/functionality_enabled 1
+```
+
 
 ### Load Balancing
 Magento Support team provides the services of Load
