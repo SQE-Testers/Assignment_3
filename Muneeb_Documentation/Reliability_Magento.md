@@ -41,6 +41,7 @@ data.The backup tasks can be managed by the Magento support staff.
 Routine backups are done when you use the Magento hosting support. 
 For your Magento system and databases, they create backups.
 In any unavoidable circumstances data can be retrieved quickly.
+Thus it enhances the Availability of application.
 
 ### Commands
 ```bash
