@@ -59,3 +59,7 @@ Magento do it by :
 - Incremental and full backups
 - Continous support on Application level
 
+### References
+- [Magento Cloud Architecture ](https://devdocs.magento.com/cloud/architecture/cloud-architecture.html?itm_source=devdocs&itm_medium=search_page&itm_campaign=federated_search&itm_term=Reliability)
+-[Backup Documentation](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html#instgde-cli-uninst-back-over)
+
